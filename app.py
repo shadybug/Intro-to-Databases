@@ -12,6 +12,9 @@ myexample_db = mysql.connector.connect(
 
 mycursor = myexample_db.cursor()
 mycursor.execute("CREATE DATABASE IF NOT EXISTS mydatabase;")
+mycursor.execute("USE mydatabase;")
+mycursor.execute("CREATE TABLE IF NOT EXISTS friends (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), major INT);")
+myexample_db.commit()
 
 @app.route('/')
 def hello():
