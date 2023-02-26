@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Here are some of my friends in the database.</p>
+
+        {% if list != "" %}
+            <h3>{{title}}</h3>
+            <ul>
+                {% for name in list %}
+                    <li>{{name[0]}}, {{name[1]}}, {{name[2]}}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </body>
+</html>
